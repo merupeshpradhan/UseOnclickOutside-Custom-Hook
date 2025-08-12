@@ -7,9 +7,24 @@ export default function UseOnclickOutsideTest() {
   UseOutsideClick(ref, () => setShowContent(false));
 
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       {showContent ? (
-        <div ref={ref}>
+        <div
+          ref={ref}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "20px",
+            gap: "10px",
+          }}
+        >
           <h1>This is a random content</h1>
           <p>
             Please click outside of this to close this. It won't close if you
@@ -17,7 +32,17 @@ export default function UseOnclickOutsideTest() {
           </p>
         </div>
       ) : (
-        <button onClick={() => setShowContent(true)}>Show Content</button>
+        <button
+          style={{
+            marginTop: "20px",
+            padding: "3px 10px",
+            fontSize: "14px",
+            fontWeight: "600",
+          }}
+          onClick={() => setShowContent(true)}
+        >
+          Show Content
+        </button>
       )}
     </div>
   );
