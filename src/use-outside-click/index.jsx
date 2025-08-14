@@ -6,7 +6,7 @@ export default function UseOutsideClick(ref, handler) {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
-      handler(event);
+      handler(event); 
     }
 
     document.addEventListener("mousedown", listener);

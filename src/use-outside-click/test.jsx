@@ -22,7 +22,7 @@ export default function UseOnclickOutsideTest() {
             flexDirection: "column",
             alignItems: "center",
             marginTop: "20px",
-            gap: "10px",
+            gap: "10px", 
           }}
         >
           <h1>This is a random content</h1>
